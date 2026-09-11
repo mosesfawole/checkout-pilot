@@ -55,6 +55,10 @@ docker run --rm -p 8787:8787 `
 
 For the hackathon's public capability review, demo mode is enough to exercise the API without credentials or financial activity. Moove live mode is a separate configuration and should be enabled only when a real pilot is ready.
 
+### Render
+
+The included `render.yaml` is a Blueprint deployment. Create a Render service from the public GitHub repository, set `SOURCE_COMMIT` to the deployed Git commit, and leave the Moove variables blank for demo mode. Render will expose `/health` and the X-Agent verification endpoint over HTTPS.
+
 ## Verify
 
 ```powershell
