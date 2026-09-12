@@ -396,8 +396,8 @@ export function createAppServer({ env = process.env, store = new Map(), now = ()
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const port = Number(process.env.PORT || DEFAULT_PORT);
   const server = createAppServer();
-  server.listen(port, '127.0.0.1', () => {
-    console.log(`Checkout Pilot running at http://127.0.0.1:${port}`);
+  server.listen(port, '0.0.0.0', () => {
+    console.log(`Checkout Pilot running on port ${port}`);
     console.log(`Mode: ${getMode(process.env).mode}`);
   });
 }
